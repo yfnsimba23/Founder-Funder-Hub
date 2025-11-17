@@ -5,8 +5,6 @@ import type { UserProfile, UserRole, Post, Message, Conversation } from '../type
 let mockUsers: UserProfile[] = [
     { uid: '1', email: 'founder@test.com', role: 'Founder', fullName: 'Alex Founder', photoURL: 'https://picsum.photos/seed/1/200', startupName: 'Innovate AI', oneLinePitch: 'AI-powered solutions for modern businesses.', industry: 'AI', fundingStage: 'Seed', myAsk: 'Seeking connections with enterprise clients and strategic partners.', pitchDeckUrl: '#' },
     { uid: '2', email: 'funder@test.com', role: 'Funder', fullName: 'Bella Funder', photoURL: 'https://picsum.photos/seed/2/200', firmName: 'Capital Ventures', investmentThesis: 'Investing in disruptive, early-stage SaaS and FinTech companies.', preferredStage: 'Seed', whatIOffer: 'Extensive mentorship, operational support, and access to our network.' },
-    { uid: '3', email: 'founder2@test.com', role: 'Founder', fullName: 'Chris Innovator', photoURL: 'https://picsum.photos/seed/3/200', startupName: 'HealthTech Plus', oneLinePitch: 'Revolutionizing patient care through decentralized health records.', industry: 'HealthTech', fundingStage: 'Pre-seed', myAsk: 'Looking for a technical co-founder and pre-seed funding.' },
-    { uid: '4', email: 'funder2@test.com', role: 'Funder', fullName: 'Diana Investor', photoURL: 'https://picsum.photos/seed/4/200', firmName: 'Growth Equity', investmentThesis: 'Series A and B investments in ClimateTech.', preferredStage: 'Series A', whatIOffer: 'Help with scaling and international expansion.' },
 ];
 
 let mockPosts: Post[] = [];

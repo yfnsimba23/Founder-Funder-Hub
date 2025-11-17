@@ -4,12 +4,15 @@ import React, { useState } from 'react';
 type CommunityTab = 'Discover' | 'Websites' | 'Internal Tools';
 
 const discoverItems = [
-    { title: "New AI Model Smashes Benchmarks", source: "TechCrunch", img: "https://picsum.photos/seed/ai/400/200" },
-    { title: "The Future of Decentralized Finance", source: "CoinDesk", img: "https://picsum.photos/seed/defi/400/200" },
-    { title: "Climate Tech Sees Record Investment in Q3", source: "Axios", img: "https://picsum.photos/seed/climate/400/200" },
-    { title: "VCs Are Pouring Money Into Green Hydrogen", source: "Bloomberg", img: "https://picsum.photos/seed/green/400/200" },
-    { title: "How to Build a Defensible SaaS Business", source: "First Round Review", img: "https://picsum.photos/seed/saas/400/200" },
-    { title: "The Creator Economy is Entering a New Era", source: "The Information", img: "https://picsum.photos/seed/creator/400/200" },
+    { title: "New AI Model Smashes Benchmarks", source: "TechCrunch", img: "https://picsum.photos/seed/ai/400/200", url: "https://techcrunch.com/" },
+    { title: "The Future of Decentralized Finance", source: "CoinDesk", img: "https://picsum.photos/seed/defi/400/200", url: "https://www.coindesk.com/" },
+    { title: "Climate Tech Sees Record Investment in Q3", source: "Axios", img: "https://picsum.photos/seed/climate/400/200", url: "https://www.axios.com/" },
+    { title: "VCs Are Pouring Money Into Green Hydrogen", source: "Bloomberg", img: "https://picsum.photos/seed/green/400/200", url: "https://www.bloomberg.com/" },
+    { title: "How to Build a Defensible SaaS Business", source: "First Round Review", img: "https://picsum.photos/seed/saas/400/200", url: "https://review.firstround.com/" },
+    { title: "The Creator Economy is Entering a New Era", source: "The Information", img: "https://picsum.photos/seed/creator/400/200", url: "https://www.theinformation.com/" },
+    { title: "Navigating the Current Fundraising Climate", source: "Forbes", img: "https://picsum.photos/seed/fundraising/400/200", url: "https://www.forbes.com/capital" },
+    { title: "The Rise of Vertical SaaS", source: "Battery Ventures", img: "https://picsum.photos/seed/vertical/400/200", url: "https://www.battery.com/blog/cloud-native-vertical-saas/" },
+    { title: "From 0 to 1: A Founder's Guide to Product-Market Fit", source: "Y Combinator", img: "https://picsum.photos/seed/pmf/400/200", url: "https://www.ycombinator.com/library" },
 ];
 
 const websites = [
@@ -41,13 +44,13 @@ export const Community: React.FC = () => {
                 return (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {discoverItems.map((item, index) => (
-                            <div key={index} className="bg-gray-800 rounded-lg overflow-hidden border border-gray-700">
+                            <a href={item.url} target="_blank" rel="noopener noreferrer" key={index} className="block bg-gray-800 rounded-lg overflow-hidden border border-gray-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-900/50 hover:border-orange-700">
                                 <img src={item.img} alt={item.title} className="w-full h-40 object-cover" />
                                 <div className="p-4">
                                     <h3 className="font-bold text-white text-lg">{item.title}</h3>
                                     <p className="text-sm text-gray-400">{item.source}</p>
                                 </div>
-                            </div>
+                            </a>
                         ))}
                     </div>
                 );
